@@ -10,7 +10,6 @@
   "prettier.semi": false,
   "prettier.endOfLine": "lf",
   "files.eol": "\n",
-
   "[javascript]": {
     "editor.formatOnSave": false
   },
@@ -23,12 +22,20 @@
   "[vue]": {
     "editor.formatOnSave": false
   },
-  "eslint.validate": ["javascript", "javascriptreact", "typescript", "vue"],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "vue"
+  ],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
   "files.associations": {
     "*.env.*": "dotenv",
     "*.css": "postcss"
+  },
+  "[dotenv]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
   }
 }

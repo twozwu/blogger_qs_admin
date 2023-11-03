@@ -19,7 +19,7 @@ const users = {
     id: 3,
     name: '访客(guest)',
     avatar: 'https://assets.qszone.com/images/avatar.jpg',
-    role: [],
+    role: ['guest'],
   },
 }
 export default [

@@ -12,10 +12,12 @@ interface ColorAction {
   handler: (color: string) => string
 }
 
+const isDarkTheme = window.matchMedia('(prefers-color-scheme: dark)') as unknown as boolean // 判斷是否深色主題
+
 /** 初始化主题配置 */
 export function initThemeSettings(): Theme.Setting {
   const isMobile = themeSetting.isMobile || false
-  const darkMode = themeSetting.darkMode || false
+  const darkMode = themeSetting.darkMode || false || isDarkTheme
   const sider = themeSetting.sider || { width: 220, collapsedWidth: 64, collapsed: false }
   const header = themeSetting.header || { visible: true, height: 60 }
   const tab = themeSetting.tab || { visible: true, height: 50 }

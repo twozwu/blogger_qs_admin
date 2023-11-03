@@ -5,7 +5,7 @@ interface NumItem {
   id: number
   num: number
 }
-const numList = ref<NumItem[]>(new Array(81).fill(undefined).map((item, index) => ({ id: index, num: index % 9 + 1 })))
+const numList = ref<NumItem[]>([].map((item, index) => ({ id: index, num: index % 9 + 1 })))
 </script>
 
 <template>

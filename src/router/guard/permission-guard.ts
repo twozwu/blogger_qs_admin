@@ -1,5 +1,5 @@
 import type { Router } from 'vue-router'
-import { getToken, isNullOrWhitespace, refreshAccessToken } from '@/utils'
+import { getToken, isNullOrWhitespace, refreshAccessToken, setToken } from '@/utils'
 
 const WHITE_LIST = ['/login']
 export function createPermissionGuard(router: Router) {
@@ -8,6 +8,7 @@ export function createPermissionGuard(router: Router) {
 
     /** 没有token的情况 */
     if (isNullOrWhitespace(token)) {
+      setToken('guest')
       if (WHITE_LIST.includes(to.path))
         return true
 

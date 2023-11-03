@@ -3,6 +3,7 @@ import { resolveToken } from '../utils'
 const token = {
   admin: 'admin',
   editor: 'editor',
+  guest: 'guest',
 }
 
 export default [
@@ -11,7 +12,7 @@ export default [
     method: 'post',
     response: (options) => {
       const { name } = options.body
-      if (['admin', 'editor'].includes(name)) {
+      if (['admin', 'editor', 'guest'].includes(name)) {
         return {
           code: 0,
           data: {
